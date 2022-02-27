@@ -1,0 +1,19 @@
+{%if team_list %}
+    <ul>
+        {% for team in team_list %}
+            <li>
+                <a href="{% url 'team_detail' team.id %}">
+                    {{team.name}}
+                </a>
+                <span>
+                    =====
+                </span>
+                <a href="{% url 'coaches' team.id %}">
+                    View Coaches
+                </a>
+            </li>    
+        {% endfor %}
+    
+    </ul>
+
+{% endif %}

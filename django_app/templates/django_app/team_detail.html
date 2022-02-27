@@ -1,0 +1,7 @@
+<form action="{% url 'team_detail' team.id %}" method="POST">
+    {% csrf_token %}
+    <label for="team_name">
+        Team: <input type="text" name="team_name" value="{{team.name}}" id="team_name">
+    </label>
+    <input type="submit" value="Submit Changes">
+</form>
